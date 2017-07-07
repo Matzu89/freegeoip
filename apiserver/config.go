@@ -72,7 +72,7 @@ func NewConfig() *Config {
 		LetsEncryptHosts:    "",
 		APIPrefix:           "/",
 		CORSOrigin:          "*",
-		ReadTimeout:         30 * time.Second,
+		ReadTimeout:         0 * time.Second,
 		WriteTimeout:        15 * time.Second,
 		DB:                  freegeoip.MaxMindDB,
 		UpdateInterval:      24 * time.Hour,
@@ -86,6 +86,7 @@ func NewConfig() *Config {
 		RateLimitInterval:   time.Hour,
 		UpdatesHost:         "updates.maxmind.com",
 		ProductID:           "GeoIP2-City",
+		RateLimitLimit:      0
 	}
 }
 
